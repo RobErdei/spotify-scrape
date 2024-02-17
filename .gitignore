@@ -3,5 +3,3 @@
 
 #ignore the following paths in the working directory
 CSV_Dumps/
-Experimental/
-JSON_Dumps/
