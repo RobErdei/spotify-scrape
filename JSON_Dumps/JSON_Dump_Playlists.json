@@ -1,0 +1,782 @@
+{
+  "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g/playlists?offset=0&limit=20",
+  "items": [
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/0gE6UniMJk9L3ds2aLRIw6"
+      },
+      "href": "https://api.spotify.com/v1/playlists/0gE6UniMJk9L3ds2aLRIw6",
+      "id": "0gE6UniMJk9L3ds2aLRIw6",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b273096ff65a01aa2cb17a03c94aab67616d0000b2734aeae012b2e8aaadb86432bfab67616d0000b27366593bf138fa34fdfcc7dd17ab67616d0000b273ab79a012f43113bd0c6aaa4d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b273096ff65a01aa2cb17a03c94aab67616d0000b2734aeae012b2e8aaadb86432bfab67616d0000b27366593bf138fa34fdfcc7dd17ab67616d0000b273ab79a012f43113bd0c6aaa4d",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b273096ff65a01aa2cb17a03c94aab67616d0000b2734aeae012b2e8aaadb86432bfab67616d0000b27366593bf138fa34fdfcc7dd17ab67616d0000b273ab79a012f43113bd0c6aaa4d",
+          "width": 60
+        }
+      ],
+      "name": "High-Knees Deez",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MjksZDQzZjExMmUxMWVmZWRjZDdmYWRjOWY2YTI1YWM2MDI3NWIxYmZkMA==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/0gE6UniMJk9L3ds2aLRIw6/tracks",
+        "total": 27
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:0gE6UniMJk9L3ds2aLRIw6"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/5RtNk762B6tBWFcTgfVdEK"
+      },
+      "href": "https://api.spotify.com/v1/playlists/5RtNk762B6tBWFcTgfVdEK",
+      "id": "5RtNk762B6tBWFcTgfVdEK",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2731729ac53ff87e3ecdd54ed4f",
+          "width": 640
+        }
+      ],
+      "name": "Bwap",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "NiwyMTQ3NDcwN2RjMTQwNDJjZTMxMjBlMzYxODQzY2RjNTIyY2FmMmQz",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/5RtNk762B6tBWFcTgfVdEK/tracks",
+        "total": 2
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:5RtNk762B6tBWFcTgfVdEK"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/5J4ugm0m3a9FCaJ6npFXOb"
+      },
+      "href": "https://api.spotify.com/v1/playlists/5J4ugm0m3a9FCaJ6npFXOb",
+      "id": "5J4ugm0m3a9FCaJ6npFXOb",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b273096da2af07c4040a77d83d25ab67616d0000b2731420e28a7dd398f0c913b890ab67616d0000b2733814b03b0576f0253a203f77ab67616d0000b273d0512bef988dfb19facc492d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b273096da2af07c4040a77d83d25ab67616d0000b2731420e28a7dd398f0c913b890ab67616d0000b2733814b03b0576f0253a203f77ab67616d0000b273d0512bef988dfb19facc492d",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b273096da2af07c4040a77d83d25ab67616d0000b2731420e28a7dd398f0c913b890ab67616d0000b2733814b03b0576f0253a203f77ab67616d0000b273d0512bef988dfb19facc492d",
+          "width": 60
+        }
+      ],
+      "name": "Sensual Bliss",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MjMsMDY2YWY4MzZjZTUwODdmN2JhMTU5NjdlN2UyNWNlYmVhZmQ0Y2IwYw==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/5J4ugm0m3a9FCaJ6npFXOb/tracks",
+        "total": 19
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:5J4ugm0m3a9FCaJ6npFXOb"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/0RweAuq4oSRCrHCLBluWt1"
+      },
+      "href": "https://api.spotify.com/v1/playlists/0RweAuq4oSRCrHCLBluWt1",
+      "id": "0RweAuq4oSRCrHCLBluWt1",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2733814b03b0576f0253a203f77ab67616d0000b2734ae620194965704f6cba2d7cab67616d0000b2737d098cca5534c83c65cb4da8ab67616d0000b2739e5a9e1a79e662ad433c354f",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2733814b03b0576f0253a203f77ab67616d0000b2734ae620194965704f6cba2d7cab67616d0000b2737d098cca5534c83c65cb4da8ab67616d0000b2739e5a9e1a79e662ad433c354f",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2733814b03b0576f0253a203f77ab67616d0000b2734ae620194965704f6cba2d7cab67616d0000b2737d098cca5534c83c65cb4da8ab67616d0000b2739e5a9e1a79e662ad433c354f",
+          "width": 60
+        }
+      ],
+      "name": "Playlist for Aleeeeeeeeee",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MTksYWQ2YWU0ZDVlNTY4ODJjYzY2NzkzNTE2NzVlMjgzMDU0YzQwZmY0MA==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/0RweAuq4oSRCrHCLBluWt1/tracks",
+        "total": 15
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:0RweAuq4oSRCrHCLBluWt1"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/6z6xZXDDhocqV3v4VVxBSt"
+      },
+      "href": "https://api.spotify.com/v1/playlists/6z6xZXDDhocqV3v4VVxBSt",
+      "id": "6z6xZXDDhocqV3v4VVxBSt",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27341b41e6f7924e530a9b00f9cab67616d0000b2734dfeaa2788db0f69dcd68804ab67616d0000b2739d5d8ac73325fec119eecfb3ab67616d0000b273dcdb4e5b707b7dc9e22c3796",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27341b41e6f7924e530a9b00f9cab67616d0000b2734dfeaa2788db0f69dcd68804ab67616d0000b2739d5d8ac73325fec119eecfb3ab67616d0000b273dcdb4e5b707b7dc9e22c3796",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27341b41e6f7924e530a9b00f9cab67616d0000b2734dfeaa2788db0f69dcd68804ab67616d0000b2739d5d8ac73325fec119eecfb3ab67616d0000b273dcdb4e5b707b7dc9e22c3796",
+          "width": 60
+        }
+      ],
+      "name": "Onion Cutting Mix",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MTYsNmY4MzdjMjkwM2FjODk3ZThjMzlkYzVlYTEwMmMyNjY4YTVkMTUwYw==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/6z6xZXDDhocqV3v4VVxBSt/tracks",
+        "total": 14
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:6z6xZXDDhocqV3v4VVxBSt"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/4kq8Z4oQLWBMD9vDdivRiQ"
+      },
+      "href": "https://api.spotify.com/v1/playlists/4kq8Z4oQLWBMD9vDdivRiQ",
+      "id": "4kq8Z4oQLWBMD9vDdivRiQ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b273301d745dd98676eadb017b8dab67616d0000b2738d4186bd0f6b70d6061ef4c0ab67616d0000b273e05efe944e4378175bd13e2bab67616d0000b273f629d04ea328846e132d7d1b",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b273301d745dd98676eadb017b8dab67616d0000b2738d4186bd0f6b70d6061ef4c0ab67616d0000b273e05efe944e4378175bd13e2bab67616d0000b273f629d04ea328846e132d7d1b",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b273301d745dd98676eadb017b8dab67616d0000b2738d4186bd0f6b70d6061ef4c0ab67616d0000b273e05efe944e4378175bd13e2bab67616d0000b273f629d04ea328846e132d7d1b",
+          "width": 60
+        }
+      ],
+      "name": "Real Estate Hazards",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MTUxLGQxY2RkNWE1M2MzODJiZDQxMWJhNDQzY2NmYmJlN2NkODI1ZTRiZmI=",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/4kq8Z4oQLWBMD9vDdivRiQ/tracks",
+        "total": 130
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:4kq8Z4oQLWBMD9vDdivRiQ"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/7ugnzAJ3CYDblXqVvdMTFd"
+      },
+      "href": "https://api.spotify.com/v1/playlists/7ugnzAJ3CYDblXqVvdMTFd",
+      "id": "7ugnzAJ3CYDblXqVvdMTFd",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27350dc10e557721ca6e1ad8b74ab67616d0000b27360cf7c8dd93815ccd6cb4830ab67616d0000b273aad36b64a1a78951b504bc4eab67616d0000b273d8c285038ad062eba8de0737",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27350dc10e557721ca6e1ad8b74ab67616d0000b27360cf7c8dd93815ccd6cb4830ab67616d0000b273aad36b64a1a78951b504bc4eab67616d0000b273d8c285038ad062eba8de0737",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27350dc10e557721ca6e1ad8b74ab67616d0000b27360cf7c8dd93815ccd6cb4830ab67616d0000b273aad36b64a1a78951b504bc4eab67616d0000b273d8c285038ad062eba8de0737",
+          "width": 60
+        }
+      ],
+      "name": "God Fighting Mix",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MTksNWZlZjUzMGZjM2E3Mjc3MGY5ZTcwOTRlZjQ5YWYxNzkxMmUwZjVjYw==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/7ugnzAJ3CYDblXqVvdMTFd/tracks",
+        "total": 16
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:7ugnzAJ3CYDblXqVvdMTFd"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/4oz0zKL0nkyTQ7FwNYTgcE"
+      },
+      "href": "https://api.spotify.com/v1/playlists/4oz0zKL0nkyTQ7FwNYTgcE",
+      "id": "4oz0zKL0nkyTQ7FwNYTgcE",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27324261dc1d55e438883664bfdab67616d0000b2735fb65e285bf78b48bba4fb57ab67616d0000b273743e9cff638bb7dd89dc039cab67616d0000b273b114fcb563aee544e5664e58",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27324261dc1d55e438883664bfdab67616d0000b2735fb65e285bf78b48bba4fb57ab67616d0000b273743e9cff638bb7dd89dc039cab67616d0000b273b114fcb563aee544e5664e58",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27324261dc1d55e438883664bfdab67616d0000b2735fb65e285bf78b48bba4fb57ab67616d0000b273743e9cff638bb7dd89dc039cab67616d0000b273b114fcb563aee544e5664e58",
+          "width": 60
+        }
+      ],
+      "name": "Moshing Purposes",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "OTAsZDM2MGU2NmYyNWVhZmRlYmM0NTlmNDc4ZjhhNTg5YWY4OTg3MDMxOA==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/4oz0zKL0nkyTQ7FwNYTgcE/tracks",
+        "total": 82
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:4oz0zKL0nkyTQ7FwNYTgcE"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/0wSawgtzBX5wqnfIa15oCP"
+      },
+      "href": "https://api.spotify.com/v1/playlists/0wSawgtzBX5wqnfIa15oCP",
+      "id": "0wSawgtzBX5wqnfIa15oCP",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27308a1b1e0674086d3f1995e1bab67616d0000b2736da502e35a7a3e48de2b0f74ab67616d0000b27385a14a0a61f764b46cf69acdab67616d0000b273db89b08034de626ebee6823d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27308a1b1e0674086d3f1995e1bab67616d0000b2736da502e35a7a3e48de2b0f74ab67616d0000b27385a14a0a61f764b46cf69acdab67616d0000b273db89b08034de626ebee6823d",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27308a1b1e0674086d3f1995e1bab67616d0000b2736da502e35a7a3e48de2b0f74ab67616d0000b27385a14a0a61f764b46cf69acdab67616d0000b273db89b08034de626ebee6823d",
+          "width": 60
+        }
+      ],
+      "name": "When They Just Dont Understand",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "OCwwMGYzZGI2NmUyMjRkOTkzNDJlYzY1NWU0NWI5YTAwNzgxYTM3MzJh",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/0wSawgtzBX5wqnfIa15oCP/tracks",
+        "total": 6
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:0wSawgtzBX5wqnfIa15oCP"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/0XZMSErwFflsrlC2Oi7xa1"
+      },
+      "href": "https://api.spotify.com/v1/playlists/0XZMSErwFflsrlC2Oi7xa1",
+      "id": "0XZMSErwFflsrlC2Oi7xa1",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2730c9f80d7b5ceb44e19e834cfab67616d0000b2732d8b1ba2af5670ae17f81a4cab67616d0000b273c146f34cd4e9f5ab4bb592d7ab67616d0000b273d0434805d17c0542d10ea231",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2730c9f80d7b5ceb44e19e834cfab67616d0000b2732d8b1ba2af5670ae17f81a4cab67616d0000b273c146f34cd4e9f5ab4bb592d7ab67616d0000b273d0434805d17c0542d10ea231",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2730c9f80d7b5ceb44e19e834cfab67616d0000b2732d8b1ba2af5670ae17f81a4cab67616d0000b273c146f34cd4e9f5ab4bb592d7ab67616d0000b273d0434805d17c0542d10ea231",
+          "width": 60
+        }
+      ],
+      "name": "\"Ambiance\"",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MzMsMmI5YmYxYjBhNjljZjM2NGViYjYzNTAxNmUwM2EyNGNkZTNkYTNhNg==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/0XZMSErwFflsrlC2Oi7xa1/tracks",
+        "total": 29
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:0XZMSErwFflsrlC2Oi7xa1"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/7ysKXPM0Zoh7nvgDyx38A7"
+      },
+      "href": "https://api.spotify.com/v1/playlists/7ysKXPM0Zoh7nvgDyx38A7",
+      "id": "7ysKXPM0Zoh7nvgDyx38A7",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2732f791ed0a21f63e2a9f324b2ab67616d0000b273b17d34882944eaf0695153f2ab67616d0000b273c8b444df094279e70d0ed856ab67616d0000b273df55e326ed144ab4f5cecf95",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2732f791ed0a21f63e2a9f324b2ab67616d0000b273b17d34882944eaf0695153f2ab67616d0000b273c8b444df094279e70d0ed856ab67616d0000b273df55e326ed144ab4f5cecf95",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2732f791ed0a21f63e2a9f324b2ab67616d0000b273b17d34882944eaf0695153f2ab67616d0000b273c8b444df094279e70d0ed856ab67616d0000b273df55e326ed144ab4f5cecf95",
+          "width": 60
+        }
+      ],
+      "name": "Quieter Edge",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MTcsMTljNWEzOTVlZTE2ZTVkNWRkYjdjMTFmZTNjOTc0MjI4OWYxYWNmOQ==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/7ysKXPM0Zoh7nvgDyx38A7/tracks",
+        "total": 15
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:7ysKXPM0Zoh7nvgDyx38A7"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/3RAgSV68LGP1RhnvXjX1ke"
+      },
+      "href": "https://api.spotify.com/v1/playlists/3RAgSV68LGP1RhnvXjX1ke",
+      "id": "3RAgSV68LGP1RhnvXjX1ke",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27328ae9a159d24cb0ab2552712ab67616d0000b2733a2d2b9621ef645380c63c16ab67616d0000b273665aaa39df4e23556453ab93ab67616d0000b27399cd7d30289d83ac6f78eb6e",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27328ae9a159d24cb0ab2552712ab67616d0000b2733a2d2b9621ef645380c63c16ab67616d0000b273665aaa39df4e23556453ab93ab67616d0000b27399cd7d30289d83ac6f78eb6e",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27328ae9a159d24cb0ab2552712ab67616d0000b2733a2d2b9621ef645380c63c16ab67616d0000b273665aaa39df4e23556453ab93ab67616d0000b27399cd7d30289d83ac6f78eb6e",
+          "width": 60
+        }
+      ],
+      "name": "Bangers",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MTEsZTEzOGY4NWJiNDc2OWQyYWFlODY3ZmViYzgyNDVkMWFjODIxNWVkZg==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/3RAgSV68LGP1RhnvXjX1ke/tracks",
+        "total": 9
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:3RAgSV68LGP1RhnvXjX1ke"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/65W0qtQGVMdFSKFQHlGnxo"
+      },
+      "href": "https://api.spotify.com/v1/playlists/65W0qtQGVMdFSKFQHlGnxo",
+      "id": "65W0qtQGVMdFSKFQHlGnxo",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2732be8fc23aa3a7500f470b0efab67616d0000b273a541c1ecb21c64ed7f38e4e2ab67616d0000b273b1338feeb7124867dc9e4783ab67616d0000b273f65ac1f1acc544a47d6f4722",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2732be8fc23aa3a7500f470b0efab67616d0000b273a541c1ecb21c64ed7f38e4e2ab67616d0000b273b1338feeb7124867dc9e4783ab67616d0000b273f65ac1f1acc544a47d6f4722",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2732be8fc23aa3a7500f470b0efab67616d0000b273a541c1ecb21c64ed7f38e4e2ab67616d0000b273b1338feeb7124867dc9e4783ab67616d0000b273f65ac1f1acc544a47d6f4722",
+          "width": 60
+        }
+      ],
+      "name": "Zonk",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MzEsYmE1MzI2Yzk5YzVhY2ExMDVmM2Q5YjI2MDk5YmYzYmEzOGIyNmNlZg==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/65W0qtQGVMdFSKFQHlGnxo/tracks",
+        "total": 29
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:65W0qtQGVMdFSKFQHlGnxo"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/5oC85D7MctwFCczt2CDQbN"
+      },
+      "href": "https://api.spotify.com/v1/playlists/5oC85D7MctwFCczt2CDQbN",
+      "id": "5oC85D7MctwFCczt2CDQbN",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27348cedec86716241749e0b5b3ab67616d0000b27368c4932485cb24dd7f46a1edab67616d0000b2739ac4e14fdaf2f24717050239ab67616d0000b273be9fa0b820bcd93392d4047b",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27348cedec86716241749e0b5b3ab67616d0000b27368c4932485cb24dd7f46a1edab67616d0000b2739ac4e14fdaf2f24717050239ab67616d0000b273be9fa0b820bcd93392d4047b",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27348cedec86716241749e0b5b3ab67616d0000b27368c4932485cb24dd7f46a1edab67616d0000b2739ac4e14fdaf2f24717050239ab67616d0000b273be9fa0b820bcd93392d4047b",
+          "width": 60
+        }
+      ],
+      "name": "Bangin",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MjgsMzUwZmJkMWQ1OGQwODZiMTY3ZTBhMzE5YzViOThmMDcyNzY5ZTI0OQ==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/5oC85D7MctwFCczt2CDQbN/tracks",
+        "total": 22
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:5oC85D7MctwFCczt2CDQbN"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/6GJtrXYukfZ2UMukU0Uc5d"
+      },
+      "href": "https://api.spotify.com/v1/playlists/6GJtrXYukfZ2UMukU0Uc5d",
+      "id": "6GJtrXYukfZ2UMukU0Uc5d",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b27303ca37157b9ceefbe8fe225bab67616d0000b27330dfb658f93642b6710c9cc5ab67616d0000b2733814b03b0576f0253a203f77ab67616d0000b273980caf4dd525a15f08f8cb87",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b27303ca37157b9ceefbe8fe225bab67616d0000b27330dfb658f93642b6710c9cc5ab67616d0000b2733814b03b0576f0253a203f77ab67616d0000b273980caf4dd525a15f08f8cb87",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b27303ca37157b9ceefbe8fe225bab67616d0000b27330dfb658f93642b6710c9cc5ab67616d0000b2733814b03b0576f0253a203f77ab67616d0000b273980caf4dd525a15f08f8cb87",
+          "width": 60
+        }
+      ],
+      "name": "Deak",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "MTEsNzQ0MWQwNjIxYzllM2JmMmE0ZTk2Yzk5YWVmNzljMWQwMWViMDU1Nw==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/6GJtrXYukfZ2UMukU0Uc5d/tracks",
+        "total": 6
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:6GJtrXYukfZ2UMukU0Uc5d"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/5vB0v2IXLQhiiTYODaHBTH"
+      },
+      "href": "https://api.spotify.com/v1/playlists/5vB0v2IXLQhiiTYODaHBTH",
+      "id": "5vB0v2IXLQhiiTYODaHBTH",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b273093f8cf987d0dbed532d7089ab67616d0000b27382ce0d02991fdf932cf65b42ab67616d0000b27384d413b195aac8a69cc6e5c6ab67616d0000b273e5c7c233b6792e1c6f9aeb00",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b273093f8cf987d0dbed532d7089ab67616d0000b27382ce0d02991fdf932cf65b42ab67616d0000b27384d413b195aac8a69cc6e5c6ab67616d0000b273e5c7c233b6792e1c6f9aeb00",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b273093f8cf987d0dbed532d7089ab67616d0000b27382ce0d02991fdf932cf65b42ab67616d0000b27384d413b195aac8a69cc6e5c6ab67616d0000b273e5c7c233b6792e1c6f9aeb00",
+          "width": 60
+        }
+      ],
+      "name": "PMR Civic Beat",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "NDksYTM0OGE0Y2YwMTIwZGQwYjVhMDVlZGIyMTlmNDAwNDQ0NzBkZjM1ZA==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/5vB0v2IXLQhiiTYODaHBTH/tracks",
+        "total": 45
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:5vB0v2IXLQhiiTYODaHBTH"
+    },
+    {
+      "collaborative": false,
+      "description": "",
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/04nZsLsrB0dvCa4FnLjaOr"
+      },
+      "href": "https://api.spotify.com/v1/playlists/04nZsLsrB0dvCa4FnLjaOr",
+      "id": "04nZsLsrB0dvCa4FnLjaOr",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://mosaic.scdn.co/640/ab67616d0000b2734ed674ab91bdc566534f9285ab67616d0000b27350fcab12b2e2e0ee0019ac53ab67616d0000b273b6ee5e71f42e672129229b78ab67616d0000b273c99e3953a4d2ef9b90c39139",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://mosaic.scdn.co/300/ab67616d0000b2734ed674ab91bdc566534f9285ab67616d0000b27350fcab12b2e2e0ee0019ac53ab67616d0000b273b6ee5e71f42e672129229b78ab67616d0000b273c99e3953a4d2ef9b90c39139",
+          "width": 300
+        },
+        {
+          "height": 60,
+          "url": "https://mosaic.scdn.co/60/ab67616d0000b2734ed674ab91bdc566534f9285ab67616d0000b27350fcab12b2e2e0ee0019ac53ab67616d0000b273b6ee5e71f42e672129229b78ab67616d0000b273c99e3953a4d2ef9b90c39139",
+          "width": 60
+        }
+      ],
+      "name": "Songs That Grease my Gristle",
+      "owner": {
+        "display_name": "Rob",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/user/ofjx3t6vxbcs3xpxvnzszkb3g"
+        },
+        "href": "https://api.spotify.com/v1/users/ofjx3t6vxbcs3xpxvnzszkb3g",
+        "id": "ofjx3t6vxbcs3xpxvnzszkb3g",
+        "type": "user",
+        "uri": "spotify:user:ofjx3t6vxbcs3xpxvnzszkb3g"
+      },
+      "primary_color": null,
+      "public": true,
+      "snapshot_id": "NTMsMjJhNmJjNTlmNzA1YzI4MjY0MjIyNzc2ZjlkYmNkYmMwMWNkZDczMA==",
+      "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/04nZsLsrB0dvCa4FnLjaOr/tracks",
+        "total": 49
+      },
+      "type": "playlist",
+      "uri": "spotify:playlist:04nZsLsrB0dvCa4FnLjaOr"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 17
+}
