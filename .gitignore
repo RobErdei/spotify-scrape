@@ -1,6 +1,6 @@
 # ignore all .env files
 *.env
 
-dir_to_ignore/CSV_Dumps/
-dir_to_ignore/Experimental/
-dir_to_ignore/JSON_Dumps/
+CSV_Dumps/
+Experimental/
+JSON_Dumps/
