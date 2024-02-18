@@ -99,18 +99,15 @@ def GetPlaylistInfo(token_info):
             song_uri = song["track"]["uri"]
             new_row = [row, object_type, album_id, album_name, album_release_date, album_artist_id, album_artist_name, album_object_type, album_total_tracks, other_object_type, album_uri, song_number_in_album, song_id, song_name, song_popularity, song_type, song_duration, song_explicit, song_uri]
             df2.loc[len(df2.index)] = new_row
-        
+        break    
 
     df3.drop_duplicates(subset=['ID'], keep=False) #Ensures artist ID field is unique in Artist table
     PlaylistInfo_1 = pd.merge(df1,df2, on='Playlist ID', how='right') #all from second, matching from first
     PlaylistInfo = pd.merge(PlaylistInfo_1,df3[['ID','Genres']], left_on='Album Artist Id', right_on='ID', how='left') #Merge on ID, include only Genres field from other table
-    filename = "PlaylistInfo"
-    filepath = Path(str(os.getenv("PROJECT_PATH")) + 'CSV Dumps/' + f'{filename}.csv')
-    filepath.parent.mkdir(parents=True, exist_ok=True)
-    PlaylistInfo.to_csv(filepath)
-    return "Completed"
 
-def GetLikedSongsInfo(token_info): #Gets LikedSongs info and exports to CSV
+    return PlaylistInfo.to_dict()
+
+def GetLikedSongsInfo(token_info): #Gets LikedSongs info and exports to tabular/csv output
     df_song = pd.DataFrame({
         "Artist ID": [],
         "Artist Name": [],
@@ -137,7 +134,7 @@ def GetLikedSongsInfo(token_info): #Gets LikedSongs info and exports to CSV
     sp = spotipy.Spotify(auth=token_info['access_token'])
     start = 0
     likedSongs = sp.current_user_saved_tracks(limit=20)['items']
-    while start <= 2000:
+    while start <= 50: #otiginally 2000
         likedSongs = sp.current_user_saved_tracks(limit=20,offset=start)['items']
         for i in likedSongs:
             for artist in i['track']['album']['artists']:   #for album table
@@ -166,8 +163,6 @@ def GetLikedSongsInfo(token_info): #Gets LikedSongs info and exports to CSV
                 df_song.loc[len(df_album.index)] = [song_artist_id, song_artist_name, song_artist_uri, song_id, song_name, song_popularity, song_uri, saved_on_DateTime, song_artist_followers, song_artist_genres]
 
         start = start + 20
-    filepath = Path('C:/Users/rober/Documents/General work stuff/CodingProjects/PythonStuff/Web Scraping/Music/Spotify/CSV Dumps/LikedSongsInfo.csv')
-    filepath.parent.mkdir(parents=True, exist_ok=True)
-    df_song.to_csv(filepath)
-    return "LikedSong Info Retrieved"
+    
+    return df_song.to_dict()
 
