@@ -1,17 +1,21 @@
 from spotipy.oauth2 import SpotifyOAuth
-
 import time
-
 from flask import Flask, request, url_for, session, redirect
 
-import sys
-sys.path.append("C:/Users/rober/Documents/General work stuff/CodingProjects/PythonStuff/Web Scraping/Music/Spotify/EnvResources")
-
 import os
-from dotenv import load_dotenv
-dotenv_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'EnvResources', '.env')
-load_dotenv(dotenv_path) #loads environment variables (.env) file
+from pathlib import Path
+import sys
 
+from dotenv import load_dotenv
+
+#Establish important filepaths
+main_path = Path(__file__).parent  # Get the directory of Main.py
+env_path = main_path.parent / 'EnvResources'  # Navigate to EnvResources
+sys.path.append(str(env_path.parent))
+
+dotenv_path = os.path.join(main_path, 'EnvResources', '.env')
+
+load_dotenv(dotenv_path) #loads environment variables (.env) file
 
 app = Flask(__name__) #defines the instance of your Flask application. code will only execute if this instance is "__main__", or the main program
 
@@ -40,28 +44,18 @@ def execution():
     except:
         print("user not logged in")
         return redirect('/')
-    
-    #call functions here
-        #VVVVVVVV
-    environment = 0 #1 is probuction enviornment, 0 is test
 
-    if environment == 1:
-        from AllFunctions import GetLikedSongsInfo, GetPlaylistInfo
-        GetPlaylistInfo(token_info)
-        return "Prod Complete"
-    elif environment == 0:
-        from TestFunctions import Test_GetPlaylistInfo, Test_GetLikedSongsInfo, Misc
-        return Test_GetLikedSongsInfo(token_info)
-    else:
-        return "invalid entry"
+    from EnvResources.AllFunctions import GetLikedSongsInfo,GetPlaylistInfo
+    GetLikedSongsInfo(token_info)
+    GetPlaylistInfo(token_info)
+    return "Here are your Spotify's song details"
+
 
 def get_token():
     token_info = session.get(TOKEN_INFO, None)
     if not token_info:
         redirect(url_for('login', external=False))
-
     now = int(time.time()) #gets current time
-
     is_expired = token_info['expires_at'] - now < 60
     if is_expired:
         spotify_oauth = create_spotify_OAuth()
