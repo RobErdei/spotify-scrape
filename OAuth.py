@@ -25,7 +25,7 @@ def authenticate_client():
         sys.exit(1)
 
 def authenticate_user():
-    username = 'WetCofnMout'
+    username = ''   # Enter Spotify Username
     try:
         token = sp_util.prompt_for_user_token(username, scope=scope)
 
