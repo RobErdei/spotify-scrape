@@ -46,8 +46,8 @@ def get_liked_songs_info(): # Retrieves a specified amount of the user's liked s
 
 @app.route('/search_artist_genres', methods=['POST'])
 def search_artist_genres(): # Retrieves genres of specified artist
-    token1 = authenticate_client()
     token = authenticate_user()
+
     sp = spotipy.Spotify(auth=token)
     artists = ['Polyphia', 'Taylor Swift', 'Olivia Rodrigo', 'DJ Khalid']   # Add artist name(s) into list
     lis = []
