@@ -4,10 +4,10 @@ import pandas as pd
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-from flask import jsonify
+from flask import jsonify, Response, stream_with_context
 
 
-def GetPlaylistInfo(token_info):
+def GetPlaylistInfo_many(token_info):
     sp = spotipy.Spotify(auth=token_info)
     current_playlists = sp.current_user_playlists()['items']
 
@@ -110,14 +110,70 @@ def GetPlaylistInfo(token_info):
 
             totalPercent = (curCount / totalLength) * 100
 
-            bar = '█' * int(totalPercent) + '-' * (100 - int(totalPercent))
-            print(f"\r|{bar}| {totalPercent:.2f}%", end="\r")
+            bar = 'H' * int(totalPercent) + '-' * (100 - int(totalPercent))
+            bar_encoded = bar.encode('utf-8')
+            #print(f"\r|{bar}| {totalPercent:.2f}%", end="\r")
+        break
 
     df3.drop_duplicates(subset=['ID'], keep=False) # Ensures artist ID field is unique in Artist table
     PlaylistInfo_1 = pd.merge(df1,df2, on='Playlist ID', how='right') # All from second, matching from first
     PlaylistInfo = pd.merge(PlaylistInfo_1,df3[['ID','Genres']], left_on='Album Artist Id', right_on='ID', how='left') # Merge on ID, include only Genres field from other table
 
-    return PlaylistInfo.to_csv('PlaylistDump.csv')
+    return PlaylistInfo.to_html()
+
+def GetPlaylistInfo_single(token_info, playlist, owner):
+    sp = spotipy.Spotify(auth=token_info)
+    result = sp.search(playlist, type='playlist')
+
+    playID = ''
+    for play in result['playlists']['items']:
+        if str(play['owner']['display_name']) == str(owner):
+            playID = play['id']
+            break
+    
+
+    content = sp.playlist_items(playID)["items"]
+
+    def JsonParsing():
+        for song in content:
+            # Album Info
+            object_type = song["track"]["album"]["album_type"]
+            album_id = song["track"]["album"]['id']
+            album_name = song["track"]["album"]['name']
+            album_release_date = song["track"]["album"]["release_date"]
+            album_artist_id  = song["track"]["album"]["artists"][0]["id"]
+            album_artist_name = song["track"]["album"]["artists"][0]["name"]
+            album_object_type = song["track"]["album"]["artists"][0]["type"]
+            album_total_tracks = song["track"]["album"]["total_tracks"]
+            other_object_type = song["track"]["album"]["type"]
+            album_uri = song["track"]["album"]["uri"]
+            song_number_in_album = song["track"]["track_number"]
+                                
+            # Song/Track Info
+            song_id = song["track"]["id"]
+            song_name = song["track"]["name"]
+            song_popularity = song["track"]["popularity"]
+            song_type = song["track"]["type"]
+            song_duration = int(song["track"]["duration_ms"]*(1/1000))    # converts song duration from milisecond to seconds
+            song_explicit =song["track"]["explicit"]
+            song_uri = song["track"]["uri"]
+
+            newSongRow = f"('{playID}', '{object_type}', '{album_id}', '{album_name}', '{album_release_date}', '{album_artist_id}', '{album_artist_name}', '{album_object_type}', '{album_total_tracks}', '{other_object_type}', '{album_uri}', '{song_number_in_album}', '{song_id}', '{song_name}', '{song_popularity}', '{song_type}', '{song_duration}', '{song_explicit}', '{song_uri}')\n"
+            
+            yield newSongRow
+
+            # Artist data
+            for artist in song["track"]["artists"]:
+                track_artist_id = artist["id"]
+                track_artist_name = artist["name"]
+                track_artist_genre = ','.join([i for i in sp.artist(track_artist_id)['genres']])
+                
+                newArtistRow = f"('{track_artist_id}', '{track_artist_name}', '{track_artist_genre}')\n"
+                yield newArtistRow
+
+    return Response(stream_with_context(JsonParsing()), content_type='text/plain')
+
+
 
 def GetPlaylistGenres(token_info, playlist, owner): # Get playlist genres
     sp = spotipy.Spotify(auth=token_info)
