@@ -23,9 +23,9 @@ def authenticate_client():
         print('API credentials not set.  Please see README for instructions on setting credentials.')
         sys.exit(1)
 
-def authenticate_user():
+def authenticate_user(user):
     load_dotenv()
-    username = os.getenv('SPOTIPY_USERNAME')
+    username = user #os.getenv('SPOTIPY_USERNAME')
     client_id = os.getenv('SPOTIPY_CLIENT_ID')
     client_secret = os.getenv('SPOTIPY_CLIENT_SECRET')
     redirect_uri = os.getenv('SPOTIPY_REDIRECT_URI')
@@ -45,6 +45,5 @@ def authenticate_user():
         else:
             print("No URI Set:  ")
         sys.exit(1)
-
 
 

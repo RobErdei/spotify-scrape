@@ -67,14 +67,17 @@ def GetPlaylistInfo_many(token_info):
 
 def GetPlaylistInfo_single(token_info, playlist, owner):
     sp = spotipy.Spotify(auth=token_info)
-    result = sp.search(playlist, type='playlist')
+
+    result = sp.search(q=playlist, type='playlist')
 
     playID = ''
     for play in result['playlists']['items']:
-        if str(play['owner']['display_name']) == str(owner):
+        if play['owner']['display_name'].lower() == owner.lower():
             playID = play['id']
             break
-    
+
+    if not playID:
+        return {"error": "No matching playlist found for the given owner."}
 
     content = sp.playlist_items(playID)["items"]
 

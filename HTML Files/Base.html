@@ -45,8 +45,10 @@
     }
   </style>
 
-  <form action="/get_single_playlist" method="post">
-    <button class="button" type="getOnePlaylist()">Get Playlist Info</button>
+  <form id="playInfoSingleForm" action="/get_single_playlist" method="post">
+    <input type="hidden" name="playlist" id="playlist_details">
+    <input type="hidden" name="owner" id="owner_details">
+    <button class="button" type="button" onclick="getPlaylistData('playInfoSingleForm', 'playlist_details', 'owner_details')">Get Playlist Details</button>
   </form>
 
   <form action="/get_all_Playlists" method="post">
@@ -61,11 +63,29 @@
     <button class="button" type="search_artist_genres()">Search Artist Genres</button>
   </form>
 
-  <form action="/get_playlist_genres" method="post">
-    <button class="button" type="get_playlist_genres()">Get Playlist Genres</button>
+  <form id="playlistGenreForm" action="/get_playlist_genres" method="post">
+    <input type="hidden" name="playlist" id="playlist_genres">
+    <input type="hidden" name="owner" id="owner_genres">
+    <button class="button" type="button" onclick="getPlaylistData('playlistGenreForm', 'playlist_genres', 'owner_genres')">Get Playlist Genres</button>
   </form>
-</div>
 
+  <script>
+  function getPlaylistData(formId, playlistFieldId, ownerFieldId) {
+      let playName = prompt("Enter the Playlist's name: ");
+      let playOwner = prompt("Enter the owner of the playlist's name: "); // Fixed typo
+
+      if (playName && playOwner) {
+          document.getElementById(playlistFieldId).value = playName; // Corrected ID reference
+          document.getElementById(ownerFieldId).value = playOwner;   // Corrected ID reference
+          document.getElementById(formId).submit();
+      } else {
+          alert("Both fields are required!");
+      }
+  }
+  </script>
+
+
+</div>
 
 </body>
 </html>

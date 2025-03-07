@@ -2,7 +2,7 @@ from Functions import GetPlaylistInfo_single, GetPlaylistInfo_many, GetLikedSong
 from OAuth import authenticate_client, authenticate_user
 import spotipy
 
-from flask import Flask, send_from_directory
+from flask import Flask, send_from_directory, request
 from pathlib import Path
 
 
@@ -18,13 +18,16 @@ def starting_page():
 
 @app.route('/get_single_playlist', methods=['POST'])
 def getOnePlaylist():    # Retrieves info of specified user playlist
-    scope = 'user-library-read playlist-read-private'
-    spotify = authenticate_client()
-    token = authenticate_user()
 
-    playlist = ''   # Single playlist name
-    owner = ''  # Spotify user
-    playlistDetails = GetPlaylistInfo_single(token, playlist, owner)
+    playlist = request.form.get('playlist', '')
+    owner = request.form.get('owner', '')
+
+    sp = authenticate_user(owner)
+
+    if not playlist or not owner:
+        return "Playlist name and owner are required. Please enter to continue!", 400
+    
+    playlistDetails = GetPlaylistInfo_single(sp, playlist, owner)
 
     return playlistDetails
 
@@ -37,13 +40,16 @@ def GetAllPlaylists():    # Retrieves info of all the user's playlists
     return playlistDetails
 
 @app.route('/get_playlist_genres', methods=['POST'])
-def get_playlist_genres():  # Retrieves genres of specific playlists made by specific users
+def get_playlist_genres():
     scope = 'user-library-read playlist-read-private'
     spotify = authenticate_client()
     token = authenticate_user()
 
-    playlist = ''   #Add your playlist name (str)
-    owner = ''  #Add your Spotify username (str)
+    playlist = request.form.get('playlist', '')
+    owner = request.form.get('owner', '')
+
+    if not playlist or not owner:
+        return "Playlist name and owner are required. Please enter to continue!", 400  
 
     result = GetPlaylistGenres(token, playlist, owner)
     return result
