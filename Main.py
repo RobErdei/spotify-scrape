@@ -1,8 +1,11 @@
 from Functions import GetPlaylistInfo_single, GetPlaylistInfo_many, GetLikedSongsInfo, ArtistSearchQuery, GetPlaylistGenres
 from OAuth import authenticate_client, authenticate_user
+
 import spotipy
 
-from flask import Flask, send_from_directory, request
+#from TEST_SqlFeeder import ConnectionTesting
+
+from flask import Flask, send_from_directory, request, jsonify
 from pathlib import Path
 
 
@@ -16,20 +19,22 @@ def starting_page():
     return send_from_directory(str(html_path), 'Base.html')
 
 
-@app.route('/get_single_playlist', methods=['POST'])
+@app.route('/get_single_playlist', methods=['POST','GET'])
 def getOnePlaylist():    # Retrieves info of specified user playlist
+    if request.method == 'POST':
+        playlist = request.form.get('playlist', '')
+        owner = request.form.get('owner', '')
 
-    playlist = request.form.get('playlist', '')
-    owner = request.form.get('owner', '')
+        sp = authenticate_user(owner)
 
-    sp = authenticate_user(owner)
+        if not playlist or not owner:
+            return "Playlist name and owner are required. Please enter to continue!", 400
+        
+        response = GetPlaylistInfo_single(sp, playlist, owner)
+        #playlistDetails = response.get_json()
+        #print(playlistDetails)
 
-    if not playlist or not owner:
-        return "Playlist name and owner are required. Please enter to continue!", 400
-    
-    playlistDetails = GetPlaylistInfo_single(sp, playlist, owner)
-
-    return playlistDetails
+    return response
 
 @app.route('/get_all_Playlists', methods=['POST'])
 def GetAllPlaylists():    # Retrieves info of all the user's playlists
@@ -67,7 +72,7 @@ def search_artist_genres(): # Retrieves genres of specified artist
     token = authenticate_user()
 
     sp = spotipy.Spotify(auth=token)
-    artists = ['Camping In Alaska']   # Add artist name(s) into list
+    artists = ['']   # Add artist name(s) into list
     lis = []
     for i in artists:
         artistName, artistGenres = ArtistSearchQuery(sp, i) # artistName = string, artistGenres = list

@@ -1,10 +1,7 @@
 import spotipy
-from spotipy.oauth2 import SpotifyOAuth
 import pandas as pd
-from pathlib import Path
-import os
-from dotenv import load_dotenv
-from flask import jsonify, Response, stream_with_context
+from flask import Response, stream_with_context
+from SqlFeeders import stagingTable_Playlist, stagingTable_Artist
 
 
 def GetPlaylistInfo_many(token_info):
@@ -29,7 +26,7 @@ def GetPlaylistInfo_many(token_info):
             content = sp.playlist_items(row)["items"]
 
             for song in content:
-                #Album Info
+                # Album Info
                 object_type = song["track"]["album"]["album_type"]
                 album_id = song["track"]["album"]['id']
                 album_name = song["track"]["album"]['name']
@@ -42,7 +39,7 @@ def GetPlaylistInfo_many(token_info):
                 album_uri = song["track"]["album"]["uri"]
                 song_number_in_album = song["track"]["track_number"]
                 
-                #Artist data (to be mapped afterwards through merge)
+                # Artist data (to be mapped afterwards through merge)
                 for artist in song["track"]["artists"]:
                     track_artist_id = artist["id"]
                     track_artist_name = artist["name"]
@@ -50,12 +47,12 @@ def GetPlaylistInfo_many(token_info):
                     newArtistRow = F"('{track_artist_id}', '{track_artist_name}', '{track_artist_genre}')\n"
                     yield newArtistRow
                                     
-                #Song/Track Info
+                # Song/Track Info
                 song_id = song["track"]["id"]
                 song_name = song["track"]["name"]
                 song_popularity = song["track"]["popularity"]
                 song_type = song["track"]["type"]
-                song_duration = int(song["track"]["duration_ms"]*(1/1000))    #converts song duration from milisecond to seconds
+                song_duration = int(song["track"]["duration_ms"]*(1/1000))    # Converts song duration from milisecond to seconds
                 song_explicit =song["track"]["explicit"]
                 song_uri = song["track"]["uri"]
                 newSongRow = F"('{row}', '{object_type}', '{album_id}', '{album_name}', '{album_release_date}', '{album_artist_id}', '{album_artist_name}', '{album_object_type}', '{album_total_tracks}', '{other_object_type}', '{album_uri}', '{song_number_in_album}', '{song_id}', '{song_name}', '{song_popularity}', '{song_type}', '{song_duration}', '{song_explicit}', '{song_uri}')\n" 
@@ -70,19 +67,32 @@ def GetPlaylistInfo_single(token_info, playlist, owner):
 
     result = sp.search(q=playlist, type='playlist')
 
-    playID = ''
+    playIdMatch = ''
+    genPlayInf = []
     for play in result['playlists']['items']:
         if play['owner']['display_name'].lower() == owner.lower():
-            playID = play['id']
+            genPlayInf.append(play['id'])
+            playIdMatch = genPlayInf[0]
+            genPlayInf.append(play['name'])
+            genPlayInf.append(play['owner']['display_name'])
+            genPlayInf.append(play['tracks']['total'])
+            genPlayInf.append(play['public'])
             break
 
-    if not playID:
+    if not playIdMatch:
         return {"error": "No matching playlist found for the given owner."}
 
-    content = sp.playlist_items(playID)["items"]
+    content = sp.playlist_items(playIdMatch)["items"]
 
     def JsonParsing():
         for song in content:
+            # General Playlist Info
+            playID = genPlayInf[0]
+            playName = genPlayInf[1]
+            playOwner = genPlayInf[2]
+            playTrackCount = genPlayInf[3]
+            playStatus = genPlayInf[4]
+
             # Album Info
             object_type = song["track"]["album"]["album_type"]
             album_id = song["track"]["album"]['id']
@@ -101,13 +111,15 @@ def GetPlaylistInfo_single(token_info, playlist, owner):
             song_name = song["track"]["name"]
             song_popularity = song["track"]["popularity"]
             song_type = song["track"]["type"]
-            song_duration = int(song["track"]["duration_ms"]*(1/1000))    # converts song duration from milisecond to seconds
+            song_duration = int(song["track"]["duration_ms"]*(1/1000))    # Converts song duration from milisecond to seconds
             song_explicit =song["track"]["explicit"]
             song_uri = song["track"]["uri"]
 
-            newSongRow = f"('{playID}', '{object_type}', '{album_id}', '{album_name}', '{album_release_date}', '{album_artist_id}', '{album_artist_name}', '{album_object_type}', '{album_total_tracks}', '{other_object_type}', '{album_uri}', '{song_number_in_album}', '{song_id}', '{song_name}', '{song_popularity}', '{song_type}', '{song_duration}', '{song_explicit}', '{song_uri}')\n"
+            newSongRow = (playID, playName, playOwner, playTrackCount, playStatus, object_type, album_id, album_name, album_release_date, album_artist_id, album_artist_name, album_object_type, album_total_tracks, other_object_type, album_uri, song_number_in_album, song_id, song_name, song_popularity, song_type, song_duration, song_explicit, song_uri)
+
+            stagingTable_Playlist(newSongRow)
             
-            yield newSongRow
+            yield str(newSongRow) + '\n'
 
             # Artist data
             for artist in song["track"]["artists"]:
@@ -116,7 +128,11 @@ def GetPlaylistInfo_single(token_info, playlist, owner):
                 track_artist_genre = ','.join([i for i in sp.artist(track_artist_id)['genres']])
                 
                 newArtistRow = f"('{track_artist_id}', '{track_artist_name}', '{track_artist_genre}')\n"
-                yield newArtistRow
+                newArtistRow = (track_artist_id, track_artist_name, track_artist_genre)
+                
+                stagingTable_Artist(newArtistRow)
+                yield str(newArtistRow) + '\n'
+        
 
     return Response(stream_with_context(JsonParsing()), content_type='text/plain')
 
@@ -146,7 +162,7 @@ def GetPlaylistGenres(token_info, playlist, owner): # Get playlist genres
     artistDF = artistDF.rename(columns={'ArtistGenres' : str(playlist)})
     genres = artistDF[str(playlist)].sort_values(ascending=True).drop_duplicates()
 
-    frame = pd.DataFrame(genres)    # Only needed so I can return to_html
+    frame = pd.DataFrame(genres)    # Only needed so result can be returned to_html
 
     return frame.to_html(index=False)
 
