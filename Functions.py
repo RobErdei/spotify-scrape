@@ -127,7 +127,6 @@ def GetPlaylistInfo_single(token_info, playlist, owner):
                 track_artist_name = artist["name"]
                 track_artist_genre = ','.join([i for i in sp.artist(track_artist_id)['genres']])
                 
-                newArtistRow = f"('{track_artist_id}', '{track_artist_name}', '{track_artist_genre}')\n"
                 newArtistRow = (track_artist_id, track_artist_name, track_artist_genre)
                 
                 stagingTable_Artist(newArtistRow)
@@ -218,6 +217,7 @@ def GetLikedSongsInfo(token_info):
                     song_artist_genres = ','.join(artist_info.get('genres', []))
 
                     newArtistSongRow = f"('{song_artist_id}', '{song_artist_name}', '{song_artist_uri}', '{song_id}', '{song_name}', '{song_popularity}', '{song_uri}', '{saved_on_DateTime}', '{song_artist_followers}', '{song_artist_genres}')\n"
+
                     yield newArtistSongRow
 
     return Response(stream_with_context(parseBatchesJSON()), content_type='text/plain')

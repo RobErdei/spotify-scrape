@@ -48,41 +48,55 @@
   <form id="playInfoSingleForm" action="/get_single_playlist" method="post">
     <input type="hidden" name="playlist" id="playlist_details">
     <input type="hidden" name="owner" id="owner_details">
-    <button class="button" type="button" onclick="getPlaylistData('playInfoSingleForm', 'playlist_details', 'owner_details')">Get Playlist Details</button>
+    <button class="button" type="submit" onclick="getPlaylistData_single('playInfoSingleForm', 'playlist_details', 'owner_details')">Get Playlist Details</button>
   </form>
 
-  <form action="/get_all_Playlists" method="post">
-    <button class="button" type="GetAllPlaylists()">Get All Playlists Info</button>
+  <form id = "playInfoAllForm" action="/get_all_Playlists" method="post">
+    <input type="hidden" name="userName" id="user_details">
+    <button class="button" type="submit" onclick="getUserOnly('playInfoAllForm', 'user_details')">Get All Playlists Info</button>
   </form>
 
-  <form action="/get_liked_songs_info" method="post">
-    <button class="button" type="get_liked_songs_info()">Get Liked Songs Info</button>
+  <form id = "likedSongsInfoForm" action="/get_liked_songs_info" method="post">
+    <input type="hidden" name="userName_Liked" id="user_likedSongs">
+    <button class="button" type="submit" onclick="getUserOnly('likedSongsInfoForm', 'user_likedSongs')">Get Liked Songs Info</button>
   </form>
 
   <form action="/search_artist_genres" method="post">
-    <button class="button" type="search_artist_genres()">Search Artist Genres</button>
+    <button class="button" type="submit">Search Artist Genres</button>
   </form>
 
   <form id="playlistGenreForm" action="/get_playlist_genres" method="post">
     <input type="hidden" name="playlist" id="playlist_genres">
     <input type="hidden" name="owner" id="owner_genres">
-    <button class="button" type="button" onclick="getPlaylistData('playlistGenreForm', 'playlist_genres', 'owner_genres')">Get Playlist Genres</button>
+    <button class="button" type="submit" onclick="getPlaylistData_single('playlistGenreForm', 'playlist_genres', 'owner_genres')">Get Playlist Genres</button>
   </form>
 
   <script>
-  function getPlaylistData(formId, playlistFieldId, ownerFieldId) {
-      let playName = prompt("Enter the Playlist's name: ");
-      let playOwner = prompt("Enter the owner of the playlist's name: "); // Fixed typo
+  function getPlaylistData_single(formId, playlistFieldId, ownerFieldId) {
+    let playName = prompt("Enter the Playlist's name: ");
+    let playOwner = prompt("Enter the owner of the playlist's name: ");
 
-      if (playName && playOwner) {
-          document.getElementById(playlistFieldId).value = playName; // Corrected ID reference
-          document.getElementById(ownerFieldId).value = playOwner;   // Corrected ID reference
-          document.getElementById(formId).submit();
-      } else {
-          alert("Both fields are required!");
-      }
+    if (playName && playOwner) {
+        document.getElementById(playlistFieldId).value = playName;
+        document.getElementById(ownerFieldId).value = playOwner;
+        document.getElementById(formId).submit();
+    } else {
+        alert("Both fields are required!");
+    }
+  }
+
+  function getUserOnly(formID, userFieldID){
+    let spotifUser = prompt("Enter the spotify username: ");
+    
+    if (spotifUser) {
+        document.getElementById(userFieldID).value = spotifUser;
+        document.getElementById(formID).submit();
+    } else {
+        alert("Username is required!");
+    }
   }
   </script>
+  
 
 
 </div>
