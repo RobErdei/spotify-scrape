@@ -1,22 +1,20 @@
-from Functions import GetPlaylistInfo_single, GetPlaylistInfo_many, GetLikedSongsInfo, ArtistSearchQuery, GetPlaylistGenres
-from OAuth import authenticate_client, authenticate_user
+from WebQueries import GetPlaylistInfo_single, GetPlaylistInfo_many, GetLikedSongsInfo, ArtistSearchQuery, GetPlaylistGenres
+from OAuth import authenticate_user
 
 import spotipy
 
-#from TEST_SqlFeeder import ConnectionTesting
-
-from flask import Flask, send_from_directory, request, jsonify
+from flask import Flask, send_from_directory, request
 from pathlib import Path
 
 
-html_path = Path(__file__).parent / 'HTML Files'
+html_path = Path(__file__).parent / 'HtmlTemplates'
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def starting_page():
-    return send_from_directory(str(html_path), 'Base.html')
+    return send_from_directory(str(html_path), 'Homepage.html')
 
 
 @app.route('/get_single_playlist', methods=['POST','GET'])
@@ -61,7 +59,7 @@ def get_playlist_genres():  # Retrieves genres of artists present in a playlist
     return response
 
 @app.route('/get_liked_songs_info', methods=['POST','GET'])
-def get_liked_songs_info(): # Retrieves a specified amount of the user's liked songs
+def get_liked_songs_info(): # Retrieves info of all the user's liked songs
     if request.method == 'POST':
 
         userName = request.form.get('userName_Liked', '')
@@ -85,6 +83,8 @@ def search_artist_genres(): # Retrieves genres of specified artist
         artistName, artistGenres = ArtistSearchQuery(sp, i) # artistName = string, artistGenres = list
         lis.append(str(artistName) + " is " + str(artistGenres))
     return lis
+
+
 
 
 if __name__ == '__main__':
