@@ -1,4 +1,4 @@
-from WebQueries import GetPlaylistInfo_single, GetPlaylistInfo_many, GetLikedSongsInfo, ArtistSearchQuery, GetPlaylistGenres
+from WebQueries import GetPlaylistInfo_single, GetPlaylistInfo_many, GetLikedSongsInfo, ArtistSearchQuery, GetPlaylistGenres, GetTrackDetails
 from OAuth import authenticate_user
 
 import spotipy
@@ -29,6 +29,7 @@ def getOnePlaylist():    # Retrieves info of specified user playlist
             return "Playlist name and owner are required. Please enter to continue!", 400
         
         response = GetPlaylistInfo_single(token, playlist, owner)
+        
     return response
 
 @app.route('/get_all_Playlists', methods=['POST','GET'])
@@ -68,7 +69,7 @@ def get_liked_songs_info(): # Retrieves info of all the user's liked songs
         if not userName:
             return "Username is required. Please enter to continue!", 400
 
-        response = GetLikedSongsInfo(token)
+        response = GetLikedSongsInfo(userName, token)
     return response
 
 @app.route('/search_artist_genres', methods=['POST'])
@@ -84,7 +85,17 @@ def search_artist_genres(): # Retrieves genres of specified artist
         lis.append(str(artistName) + " is " + str(artistGenres))
     return lis
 
+@app.route('/get_additional_track_details', methods=['POST']) # Retrieves additional track data that's not availible in the other queries
+def get_additional_track_details():
+    if request.method == 'POST':
 
+        userName = request.form.get('userName_Liked', '')
+        token = authenticate_user(userName)
+        if not userName:
+            return "Username is required. Please enter to continue!", 400
+            
+        response = GetTrackDetails(token)
+    return response
 
 
 if __name__ == '__main__':

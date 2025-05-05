@@ -43,8 +43,6 @@ def stagingTable_Playlist(playlistLine):
     return
 
 def stagingTable_Artist(artLine):
-    # This table serves as a relation between artist and associated tracks. These two will be seperated into their respective destination tables to avoid redundancy
-
     load_dotenv()
     dbUser = os.getenv('DB_USER')
     dbPassword = os.getenv('DB_PASSWORD')
@@ -77,7 +75,7 @@ def stagingTable_Artist(artLine):
 
     return
 
-def stagingTable_Liked(trackDetails):
+def stagingTable_Track(trackDetails):
     load_dotenv()
     dbUser = os.getenv('DB_USER')
     dbPassword = os.getenv('DB_PASSWORD')
@@ -92,24 +90,24 @@ def stagingTable_Liked(trackDetails):
             AND table_name = %s
         )    
     '''
-    cur.execute(checkIf, ("Staging_TrackDetails",))
+    cur.execute(checkIf, ("Staging_AdditionalTrackDetails",))
     exists = cur.fetchone()[0]
-    
+
     if exists == True:
         "No action needed"  
     else:
         createTab = '''
-            CREATE TABLE "Staging_TrackDetails"(
-                song_id VARCHAR, song_name VARCHAR, song_popularity INTEGER, song_type VARCHAR, song_duration INTEGER, song_explicit BOOLEAN, song_uri VARCHAR, object_type VARCHAR, album_id VARCHAR, album_name VARCHAR, album_release_date VARCHAR, album_artist_id VARCHAR, album_artist_name VARCHAR, album_object_type VARCHAR, album_total_tracks INTEGER, other_object_type VARCHAR, album_uri VARCHAR(500), song_number_in_album INTEGER
+            CREATE TABLE "Staging_AdditionalTrackDetails"(
+                song_id VARCHAR, external_id VARCHAR, external_id_type VARCHAR, song_uri VARCHAR, song_name VARCHAR, local VARCHAR, object_type VARCHAR, is_explicit BOOLEAN, disc_number INTEGER, duration INTEGER
             )
         '''
         cur.execute(createTab)
-        
+
     insertLine = '''
-            INSERT INTO "Staging_TrackDetails" (song_id, song_name, song_popularity, song_type, song_duration, song_explicit, song_uri, object_type, album_id, album_name, album_release_date, album_artist_id, album_artist_name, album_object_type, album_total_tracks, other_object_type, album_uri, song_number_in_album) 
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            INSERT INTO "Staging_AdditionalTrackDetails" (song_id, external_id, external_id_type, song_uri, song_name, local, object_type, is_explicit, disc_number, duration) 
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         '''
-    cur.execute(insertLine, (trackDetails[0], trackDetails[1], trackDetails[2], trackDetails[3], trackDetails[4], trackDetails[5], trackDetails[6], trackDetails[7], trackDetails[8], trackDetails[9], trackDetails[10], trackDetails[11], trackDetails[12], trackDetails[13], trackDetails[14], trackDetails[15], trackDetails[16], trackDetails[17]))
+    cur.execute(insertLine, (trackDetails[0], trackDetails[1], trackDetails[2], trackDetails[3], trackDetails[4], trackDetails[5], trackDetails[6], trackDetails[7], trackDetails[8], trackDetails[9]))
         
     conn.commit()
     cur.close()

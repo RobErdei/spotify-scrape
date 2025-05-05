@@ -71,6 +71,11 @@
     <button class="button" type="submit" onclick="getPlaylistData_single('playlistGenreForm', 'playlist_genres', 'owner_genres')">Get Playlist Genres</button>
   </form>
 
+  <form id = "trackInfoForm" action="/get_additional_track_details" method="post">
+    <input type="hidden" name="userName_Liked" id="user_trackInfo">
+    <button class="button" type="submit" onclick="getUserOnly('trackInfoForm', 'user_trackInfo')">Get Additional Track Info</button>
+  </form>
+
   <script>
   function getPlaylistData_single(formId, playlistFieldId, ownerFieldId) {
     let playName = prompt("Enter the Playlist's name: ");
