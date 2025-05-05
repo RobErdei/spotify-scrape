@@ -1,7 +1,7 @@
 # Spotify Scraper
 
 This is a Flask webapp that facilitates the OAuth authentication flow in order to communicate with Spotify's API and extract song data. The OAuth process is relegated to a single script to avoid clutter. The site currently has 4 Functionalities: 
-![image](https://github.com/user-attachments/assets/9631340d-0a67-4f65-848d-8368a9542221)
+![image](https://github.com/user-attachments/assets/02755a8e-6986-453f-a700-f7ed966968f3)
 
 
 ## Get Playlist Info
